@@ -1,10 +1,10 @@
 # greenbutton
-understanding energy use through analysis of green button energy data.  Users will be able to download there energy usage data from their utility web sites as an XML or .csv file.
+This is an integrated web and Chat GPT AI system to help consumers understand their energy usage and model their historical usage with past and possible future tariffs.  It will also help them analyze decisions to invest in solar panels, batteries, or electric appliances.
 
-The web site will save the user name, green button data (for electric, gas to follow).  It will also ask for existing tariff, net metering, and solar panel information, if any.
+The core of the system is your home energy model.  All 8760 hours of the year are recorded for considered for consumption and generation, based energy costs for a given tariff for gas and electric.  You can do "what if" modeling, asking what if you added an array of solar panels on your roof at a certain tilt and sun angle.  Or used a heat pump instead of a gas furnace.  Or charged an EV at midnight instead of bought gasoline for a ICE vehicle.
 
-the program will then build a data frame of the consumption, generation (if solar), and net (if solar) and calculate the time of use rate price of energy consumption for each row of the dataframe.
+You can access this through a web page or through the Energy Insight CHAT GPT.
 
-it will then provide options to display the usage and cost data according to the chosen tariff, as well as compare alternative tariffs.  
+The model is also available through APIs as well.
 
 
