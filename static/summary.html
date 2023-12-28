@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Button Summary</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Green Button Summary</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Consumption</th>
+                    <th>Generation</th>
+                    <th>Net</th>
+                    <th>$Net</th>
+                    <th>$Consumption</th>
+                    <th>$Generation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for month in monthly_summary %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ month.Consumption }}</td>
+                    <td>{{ month.Generation }}</td>
+                    <td>{{ month.Net }}</td>
+                    <td>{{ month.$Net }}</td>
+                    <td>{{ month.$Consumption }}</td>
+                    <td>{{ month.$Generation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Annual Total</th>
+                    <td>{{ annual_total.Consumption }}</td>
+                    <td>{{ annual_total.Generation }}</td>
+                    <td>{{ annual_total.Net }}</td>
+                    <td>{{ annual_total.$Net }}</td>
+                    <td>{{ annual_total.$Consumption }}</td>
+                    <td>{{ annual_total.$Generation }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+</body>
+</html>

@@ -64,6 +64,7 @@ python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateu
 pytz==2023.3.post1
 PyYAML==6.0.1
 pyzmq @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/pyzmq_1699288341774/work
+redis
 referencing==0.32.0
 requests==2.31.0
 requests-oauthlib==1.3.1
@@ -78,6 +79,7 @@ statsmodels==0.14.0
 tenacity @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/tenacity_1699247166558/work
 tornado @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/tornado_1699250848162/work
 traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1701095650114/work
+types-redis
 typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1695040754690/work
 tzdata==2023.3
 urllib3==2.1.0

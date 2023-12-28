@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Button Summary</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        td, th {
+            text-align: right;
+        }
+        table {
+            color: #333;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Green Button Summary</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Consumption</th>
+                    <th>Generation</th>
+                    <th>Net</th>
+                    <th>NetDollar</th>
+                    <th>ConsumptionDollar</th>
+                    <th>GenerationDollar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for month in monthly_summary %}
+                <tr>
+                    <td>{{ months[loop.index0] }}</td>
+                    <td>{{ month.Consumption|round|int }}</td>
+                    <td>{{ month.Generation|round|int }}</td>
+                    <td>{{ month.Net|round|int }}</td>
+                    <td>{{ month.NetDollar|round|int }}</td>
+                    <td>{{ month.ConsumptionDollar|round|int }}</td>
+                    <td>{{ month.GenerationDollar|round|int }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Annual Total</th>
+                    <td>{{ annual_total.Consumption|round|int }}</td>
+                    <td>{{ annual_total.Generation|round|int }}</td>
+                    <td>{{ annual_total.Net|round|int }}</td>
+                    <td>{{ annual_total.NetDollar|round|int }}</td>
+                    <td>{{ annual_total.ConsumptionDollar|round|int }}</td>
+                    <td>{{ annual_total.GenerationDollar|round|int }}</td>
+                </tr>
+            </tfoot>
+        </table>
+        <img src="{{ url_for('static', filename='heatmap.png') }}" alt="Heatmap">
+    </main>
+</body>
+</html>

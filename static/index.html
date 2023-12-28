@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Insight</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <img class="logo" src="img/logo1.png" alt="Energy Insight Logo">
+    <h1>Energy Insight - an exciting new AI assistant to help you understand today's energy</h1>
+</header>
+
+<nav>
+    <a href="https://chat.openai.com/g/g-qChPC0QMJ-energy-insight" target="_blank">Explore Energy Insight</a>
+</nav>
+
+<main>
+    <section>
+        <h2>Sunlight wants to be free</h2>
+        <p>Welcome to Energy Insight! This AI assistant is here to help you understand and optimize your energy consumption with a focus on modern, solar, and renewable energy sources. Discover how you can make your energy usage more efficient and sustainable today!</p>
+        
+        <form action="http://127.0.0.1:5000/upload" method="post" enctype="multipart/form-data">
+            <h3>Upload your Greenbutton data</h3>
+            <p>Upload your Greenbutton data and we will analyze it for you.</p>
+            <input type="file" id="greenbutton-data" name="greenbutton-data" accept=".csv">
+            <input type="submit" value="Upload">
+        </form>
+    </section>
+</main>
+
+<footer>
+    &copy; 2023 Energy Insight. All rights reserved.
+</footer>
+
+</body>
+</html>
